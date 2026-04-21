@@ -24,6 +24,11 @@
     <Folder Include="src\" />
     <Folder Include="src\modules\" />
     <Folder Include="src\shared\" />
+    <Folder Include="src\shared\configuration\" />
+    <Folder Include="src\shared\context\" />
+    <Folder Include="src\shared\contracts\" />
+    <Folder Include="src\shared\helpers\" />
+    <Folder Include="src\shared\ui\" />
   </ItemGroup>
 
 </Project>
