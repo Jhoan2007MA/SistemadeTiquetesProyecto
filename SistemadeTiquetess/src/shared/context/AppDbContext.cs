@@ -2,7 +2,7 @@ using System;
 
 namespace SistemadeTiquetess.src.shared.context;
 
-public class AppDbContext
+public sealed class AppDbContext
 {
 
 }

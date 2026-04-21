@@ -2,7 +2,7 @@ using System;
 
 namespace SistemadeTiquetess.src.shared.context;
 
-public class AppContextDesignTimeFactory
+public sealed class AppContextDesignTimeFactory
 {
 
 }
