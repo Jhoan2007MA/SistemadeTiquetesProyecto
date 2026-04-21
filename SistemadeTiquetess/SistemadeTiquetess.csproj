@@ -29,6 +29,7 @@
     <Folder Include="src\shared\contracts\" />
     <Folder Include="src\shared\helpers\" />
     <Folder Include="src\shared\ui\" />
+    <Folder Include="src\shared\ui\Menus\" />
   </ItemGroup>
 
 </Project>
