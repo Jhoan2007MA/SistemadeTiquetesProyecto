@@ -31,6 +31,13 @@
     <Folder Include="src\modules\Aircrafts\Domain\valueObject\" />
     <Folder Include="src\modules\Aircrafts\infrastructure\Entity\" />
     <Folder Include="src\modules\Aircrafts\infrastructure\Repositories\" />
+    <Folder Include="src\modules\Countries\Application\" />
+    <Folder Include="src\modules\Countries\Application\Interfaces\" />
+    <Folder Include="src\modules\Countries\Application\services\" />
+    <Folder Include="src\modules\Countries\Application\usecases\" />
+    <Folder Include="src\modules\Countries\Domain\" />
+    <Folder Include="src\modules\Countries\Infrastructure\" />
+    <Folder Include="src\modules\Countries\UI\" />
     <Folder Include="src\shared\" />
     <Folder Include="src\shared\configuration\" />
     <Folder Include="src\shared\context\" />
