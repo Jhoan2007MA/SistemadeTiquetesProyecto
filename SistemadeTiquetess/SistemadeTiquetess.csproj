@@ -23,6 +23,12 @@
     <Folder Include="Migrations\" />
     <Folder Include="src\" />
     <Folder Include="src\modules\" />
+    <Folder Include="src\modules\Aircrafts\Application\interfaces\" />
+    <Folder Include="src\modules\Aircrafts\Application\Services\" />
+    <Folder Include="src\modules\Aircrafts\Application\UseCases\" />
+    <Folder Include="src\modules\Aircrafts\Domain\Aggregate\" />
+    <Folder Include="src\modules\Aircrafts\Domain\Repositories\" />
+    <Folder Include="src\modules\Aircrafts\Domain\valueObject\" />
     <Folder Include="src\shared\" />
     <Folder Include="src\shared\configuration\" />
     <Folder Include="src\shared\context\" />
