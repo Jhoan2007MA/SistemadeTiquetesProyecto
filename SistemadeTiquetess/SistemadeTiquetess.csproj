@@ -29,6 +29,8 @@
     <Folder Include="src\modules\Aircrafts\Domain\Aggregate\" />
     <Folder Include="src\modules\Aircrafts\Domain\Repositories\" />
     <Folder Include="src\modules\Aircrafts\Domain\valueObject\" />
+    <Folder Include="src\modules\Aircrafts\infrastructure\Entity\" />
+    <Folder Include="src\modules\Aircrafts\infrastructure\Repositories\" />
     <Folder Include="src\shared\" />
     <Folder Include="src\shared\configuration\" />
     <Folder Include="src\shared\context\" />
