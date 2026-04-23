@@ -249,4 +249,5 @@ Además, facilita la escalabilidad del sistema y su adaptación a necesidades m�
 **sergio andres abril mendoza**
 **Henry jhoan duran peña**
 
-Proyecto académico  desarrollado  para la gestión integral de tiquetes aéreos mediante arquitectura limpia, buenas prácticas de programación y organización modular del software.
+Proyecto académico  desarrollado 
+ para la gestión integral de tiquetes aéreos mediante arquitectura limpia, buenas prácticas de programación y organización modular del software.
