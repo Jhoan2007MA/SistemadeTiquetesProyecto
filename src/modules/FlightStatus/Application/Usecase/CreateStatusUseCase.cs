@@ -8,8 +8,9 @@ public class CreateStatusUseCase
 {
     private readonly IFlightStatusRepository _repository;
     public CreateStatusUseCase(IFlightStatusRepository repository) => _repository = repository;
-    public async Task<FlightStatus> ExecuteAsync(FlightStatus status)
+    public async Task<FlightStatusAggregate> ExecuteAsync(string name)
     {
+        var status = FlightStatusAggregate.Create(name);
         await _repository.AddAsync(status);
         return status;
     }

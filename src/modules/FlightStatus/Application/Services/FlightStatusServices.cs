@@ -16,17 +16,17 @@ public class FlightStatusServices : IFlightStatusServices
         _repository = repository;
     }
 
-    public async Task<IEnumerable<FlightStatus>> GetAllAsync() => await _repository.GetAllAsync();
+    public async Task<IEnumerable<FlightStatusAggregate>> GetAllAsync() => await _repository.GetAllAsync();
     
-    public async Task<FlightStatus?> GetByIdAsync(Guid id) => await _repository.GetByIdAsync(id);
+    public async Task<FlightStatusAggregate?> GetByIdAsync(Guid id) => await _repository.GetByIdAsync(id);
 
-    public async Task<FlightStatus> CreateAsync(FlightStatus status)
+    public async Task<FlightStatusAggregate> CreateAsync(FlightStatusAggregate status)
     {
         await _repository.AddAsync(status);
         return status;
     }
 
-    public async Task UpdateAsync(FlightStatus status) => await _repository.UpdateAsync(status);
+    public async Task UpdateAsync(FlightStatusAggregate status) => await _repository.UpdateAsync(status);
 
     public async Task DeleteAsync(Guid id) => await _repository.DeleteAsync(id);
 }

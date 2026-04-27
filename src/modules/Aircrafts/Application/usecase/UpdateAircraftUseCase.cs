@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using SistemadeTiquetess.src.modules.Aircrafts.Domain;
+using SistemadeTiquetess.src.modules.Aircrafts.Domain.Aggregate;
 using SistemadeTiquetess.src.modules.Aircrafts.Domain.Repositories;
 
 namespace SistemadeTiquetess.src.modules.Aircrafts.Application.Usecase;

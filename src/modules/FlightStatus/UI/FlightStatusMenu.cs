@@ -52,7 +52,7 @@ public class FlightStatusMenu
         Console.Write("Nombre del estado: ");
         string name = Console.ReadLine() ?? "";
         try {
-            var status = Domain.Aggregate.FlightStatus.Create(name);
+            var status = FlightStatusAggregate.Create(name);
             await _services.CreateAsync(status);
             Console.WriteLine("Estado creado.");
         } catch(Exception e) { Console.WriteLine(e.Message); }

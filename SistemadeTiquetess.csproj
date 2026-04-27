@@ -19,37 +19,17 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
   </ItemGroup>
 
-  <!-- Habilitamos la compilación de todos los módulos -->
   <ItemGroup>
-    <Compile Include="src\modules\**\*.cs" />
+    <Compile Remove="src\modules\Admin\**" />
+    <Compile Remove="src\modules\Airports\**" />
+    <Compile Remove="src\modules\Cities\**" />
+    <Compile Remove="src\modules\CustomerContacts\**" />
+    <Compile Remove="src\modules\FlightSegments\**" />
+    <Compile Remove="src\modules\PaymentMethods\**" />
+    <Compile Remove="src\modules\Payments\**" />
+    <Compile Remove="src\modules\ReservationPassengers\**" />
+    <Compile Remove="src\modules\ReservationStatus\**" />
+    <Compile Remove="src\modules\Tickets\**" />
+    <Compile Remove="src\modules\SeatAssignments\**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-    <Folder Include="src\" />
-    <Folder Include="src\modules\" />
-    <Folder Include="src\modules\Aircrafts\Application\interfaces\" />
-    <Folder Include="src\modules\Aircrafts\Application\Services\" />
-    <Folder Include="src\modules\Aircrafts\Application\UseCases\" />
-    <Folder Include="src\modules\Aircrafts\Domain\Aggregate\" />
-    <Folder Include="src\modules\Aircrafts\Domain\Repositories\" />
-    <Folder Include="src\modules\Aircrafts\Domain\valueObject\" />
-    <Folder Include="src\modules\Aircrafts\infrastructure\Entity\" />
-    <Folder Include="src\modules\Aircrafts\infrastructure\Repositories\" />
-    <Folder Include="src\modules\Countries\Application\" />
-    <Folder Include="src\modules\Countries\Application\Interfaces\" />
-    <Folder Include="src\modules\Countries\Application\services\" />
-    <Folder Include="src\modules\Countries\Application\usecases\" />
-    <Folder Include="src\modules\Countries\Domain\" />
-    <Folder Include="src\modules\Countries\Infrastructure\" />
-    <Folder Include="src\modules\Countries\UI\" />
-    <Folder Include="src\shared\" />
-    <Folder Include="src\shared\configuration\" />
-    <Folder Include="src\shared\context\" />
-    <Folder Include="src\shared\contracts\" />
-    <Folder Include="src\shared\helpers\" />
-    <Folder Include="src\shared\ui\" />
-    <Folder Include="src\shared\ui\Menus\" />
-  </ItemGroup>
-
 </Project>

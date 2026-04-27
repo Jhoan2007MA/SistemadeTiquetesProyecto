@@ -2,22 +2,22 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using SistemadeTiquetess.src.modules.Aircrafts.infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Airlines.infrastructure.Entity;
-using SistemadeTiquetess.src.modules.Airports.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.Airports.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Countries.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.CustomerContacts.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.CustomerContacts.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Customers.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.FlightSegments.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.FlightSegments.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Flights.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.FlightStatus.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.PaymentMethods.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.Payments.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.ReservationPassengers.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.FlightStatus.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.PaymentMethods.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.Payments.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.ReservationPassengers.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Reservations.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.ReservationsStatus.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.SeatAssignments.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.SeatAssignments.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.SeatAvailability.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Seats.Infrastructure.Entity;
-using SistemadeTiquetess.src.modules.Tickets.Infrastructure.Entity;
+// using SistemadeTiquetess.src.modules.Tickets.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.TicketStatus.Infrastructure.Entity;
 
 namespace SistemadeTiquetess.src.shared.context;
@@ -92,6 +92,7 @@ public static class AppDbContextSeedData
                 IsActive = true
             });
 
+        /*
         modelBuilder.Entity<AirportEntity>().HasData(
             new AirportEntity
             {
@@ -111,6 +112,7 @@ public static class AppDbContextSeedData
                 Country = "Estados Unidos",
                 IsActive = true
             });
+        */
 
         modelBuilder.Entity<AircraftEntity>().HasData(
             new AircraftEntity
@@ -123,10 +125,12 @@ public static class AppDbContextSeedData
                 IsActive = true
             });
 
+        /*
         modelBuilder.Entity<StatusEntity>().HasData(
             new StatusEntity { Id = IdFlStProg, Name = "Programado" },
             new StatusEntity { Id = IdFlStFly, Name = "En vuelo" },
             new StatusEntity { Id = IdFlStLanded, Name = "Aterrizado" });
+        */
 
         modelBuilder.Entity<TicketStatusEntity>().HasData(
             new TicketStatusEntity { Id = IdTkStIssued, Name = "Emitido" },
@@ -136,9 +140,11 @@ public static class AppDbContextSeedData
             new ReservationStatusEntity { Id = IdRvStPend, Name = "Pendiente" },
             new ReservationStatusEntity { Id = IdRvStConf, Name = "Confirmada" });
 
+        /*
         modelBuilder.Entity<PaymentMethodEntity>().HasData(
             new PaymentMethodEntity { Id = IdPmCard, Name = "Tarjeta de crédito" },
             new PaymentMethodEntity { Id = IdPmCash, Name = "Efectivo" });
+        */
 
         modelBuilder.Entity<CustomerEntity>().HasData(
             new CustomerEntity
@@ -156,6 +162,7 @@ public static class AppDbContextSeedData
                 IsActive = true
             });
 
+        /*
         modelBuilder.Entity<CustomerContactEntity>().HasData(
             new CustomerContactEntity
             {
@@ -173,6 +180,7 @@ public static class AppDbContextSeedData
                 PhoneNumber = "+57 300 3334455",
                 IsActive = true
             });
+        */
 
         modelBuilder.Entity<FlightEntity>().HasData(
             new FlightEntity
@@ -182,6 +190,7 @@ public static class AppDbContextSeedData
                 StatusId = IdFlStProg
             });
 
+        /*
         modelBuilder.Entity<SegmentEntity>().HasData(
             new SegmentEntity
             {
@@ -190,6 +199,7 @@ public static class AppDbContextSeedData
                 OriginAirportId = IdApBog,
                 DestinationAirportId = IdApMia
             });
+        */
 
         modelBuilder.Entity<SeatEntity>().HasData(
             new SeatEntity { Id = IdSeat1A, SeatNumber = "1A", Row = "1", Class = "Economy" },
@@ -237,6 +247,7 @@ public static class AppDbContextSeedData
                 StatusId = IdRvStConf
             });
 
+        /*
         modelBuilder.Entity<ReservationPassengerEntity>().HasData(
             new ReservationPassengerEntity
             {
@@ -252,7 +263,9 @@ public static class AppDbContextSeedData
                 CustomerId = IdCustomer2,
                 SeatNumber = "1B"
             });
+        */
 
+        /*
         modelBuilder.Entity<PaymentEntity>().HasData(
             new PaymentEntity
             {
@@ -270,7 +283,9 @@ public static class AppDbContextSeedData
                 Amount = 50.00m,
                 PaymentDate = SampleDate.AddHours(1)
             });
+        */
 
+        /*
         modelBuilder.Entity<SeatAssignmentEntity>().HasData(
             new SeatAssignmentEntity
             {
@@ -284,7 +299,9 @@ public static class AppDbContextSeedData
                 ReservationPassengerId = IdResPass2,
                 SeatId = IdSeat1B
             });
+        */
 
+        /*
         modelBuilder.Entity<TicketEntity>().HasData(
             new TicketEntity
             {
@@ -302,5 +319,6 @@ public static class AppDbContextSeedData
                 TicketNumber = "TK-BOG-MIA-0002",
                 IssueDate = SampleDate
             });
+        */
     }
 }

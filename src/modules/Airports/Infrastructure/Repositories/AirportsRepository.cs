@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SistemadeTiquetess.src.modules.Airports.Domain;
+using SistemadeTiquetess.src.modules.Airports.Domain.Aggregate;
 using SistemadeTiquetess.src.modules.Airports.Domain.Repositories;
 using SistemadeTiquetess.src.modules.Airports.Infrastructure.Entity;
 

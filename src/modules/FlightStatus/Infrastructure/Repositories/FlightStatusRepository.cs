@@ -20,25 +20,25 @@ public class FlightStatusRepository : IFlightStatusRepository
         _dbSet = _context.Set<StatusEntity>();
     }
 
-    public async Task<IEnumerable<Domain.Aggregate.FlightStatus>> GetAllAsync()
+    public async Task<IEnumerable<FlightStatusAggregate>> GetAllAsync()
     {
         var entities = await _dbSet.ToListAsync();
         return entities.Select(StatusMapper.ToDomain);
     }
 
-    public async Task<Domain.Aggregate.FlightStatus?> GetByIdAsync(Guid id)
+    public async Task<FlightStatusAggregate?> GetByIdAsync(Guid id)
     {
         var entity = await _dbSet.FindAsync(id);
         return entity == null ? null : StatusMapper.ToDomain(entity);
     }
 
-    public async Task AddAsync(Domain.Aggregate.FlightStatus status)
+    public async Task AddAsync(FlightStatusAggregate status)
     {
         await _dbSet.AddAsync(StatusMapper.ToEntity(status));
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(Domain.Aggregate.FlightStatus status)
+    public async Task UpdateAsync(FlightStatusAggregate status)
     {
         _dbSet.Update(StatusMapper.ToEntity(status));
         await _context.SaveChangesAsync();

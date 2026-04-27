@@ -1,6 +1,6 @@
 using System;
 using System.Reflection;
-using SistemadeTiquetess.src.modules.Airports.Domain;
+using SistemadeTiquetess.src.modules.Airports.Domain.Aggregate;
 
 namespace SistemadeTiquetess.src.modules.Airports.Infrastructure.Entity;
 

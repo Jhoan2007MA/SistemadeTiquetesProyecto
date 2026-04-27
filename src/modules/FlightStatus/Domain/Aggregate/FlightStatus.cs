@@ -2,25 +2,25 @@ using System;
 
 namespace SistemadeTiquetess.src.modules.FlightStatus.Domain.Aggregate;
 
-public class FlightStatus
+public class FlightStatusAggregate
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty;
 
-    protected FlightStatus() { }
+    protected FlightStatusAggregate() { }
 
-    private FlightStatus(Guid id, string name)
+    private FlightStatusAggregate(Guid id, string name)
     {
         Id = id;
         Name = name;
     }
 
-    public static FlightStatus Create(string name)
+    public static FlightStatusAggregate Create(string name)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("El nombre del estado de vuelo es requerido.");
 
-        return new FlightStatus(Guid.NewGuid(), name.Trim());
+        return new FlightStatusAggregate(Guid.NewGuid(), name.Trim());
     }
 
     public void UpdateName(string name)

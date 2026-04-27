@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SistemadeTiquetess.src.modules.Aircrafts.Domain;
+using SistemadeTiquetess.src.modules.Aircrafts.Domain.Aggregate;
 
 namespace SistemadeTiquetess.src.modules.Aircrafts.Application.Interfaces;
 

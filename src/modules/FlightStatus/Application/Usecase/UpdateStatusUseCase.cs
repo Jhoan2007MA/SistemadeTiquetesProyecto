@@ -8,5 +8,5 @@ public class UpdateStatusUseCase
 {
     private readonly IFlightStatusRepository _repository;
     public UpdateStatusUseCase(IFlightStatusRepository repository) => _repository = repository;
-    public async Task ExecuteAsync(FlightStatus status) => await _repository.UpdateAsync(status);
+    public async Task ExecuteAsync(FlightStatusAggregate status) => await _repository.UpdateAsync(status);
 }

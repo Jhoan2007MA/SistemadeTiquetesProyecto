@@ -1,4 +1,4 @@
-﻿namespace SistemadeTiquetess.src.modules.Aircrafts.Application;
+namespace SistemadeTiquetess.src.modules.Aircrafts.Application;
 
 public class AircraftDto
 {

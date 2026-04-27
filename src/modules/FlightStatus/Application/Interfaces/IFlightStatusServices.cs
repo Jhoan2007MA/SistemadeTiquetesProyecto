@@ -7,9 +7,9 @@ namespace SistemadeTiquetess.src.modules.FlightStatus.Application.Interfaces;
 
 public interface IFlightStatusServices
 {
-    Task<IEnumerable<FlightStatus>> GetAllAsync();
-    Task<FlightStatus?> GetByIdAsync(Guid id);
-    Task<FlightStatus> CreateAsync(FlightStatus status);
-    Task UpdateAsync(FlightStatus status);
+    Task<IEnumerable<FlightStatusAggregate>> GetAllAsync();
+    Task<FlightStatusAggregate?> GetByIdAsync(Guid id);
+    Task<FlightStatusAggregate> CreateAsync(FlightStatusAggregate status);
+    Task UpdateAsync(FlightStatusAggregate status);
     Task DeleteAsync(Guid id);
 }

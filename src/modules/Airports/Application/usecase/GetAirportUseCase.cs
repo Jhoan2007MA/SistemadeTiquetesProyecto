@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SistemadeTiquetess.src.modules.Airports.Domain;
+using SistemadeTiquetess.src.modules.Airports.Domain.Aggregate;
 using SistemadeTiquetess.src.modules.Airports.Domain.Repositories;
 
 namespace SistemadeTiquetess.src.modules.Airports.Application.Usecase;

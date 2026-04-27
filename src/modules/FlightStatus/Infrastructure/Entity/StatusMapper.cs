@@ -6,7 +6,7 @@ namespace SistemadeTiquetess.src.modules.FlightStatus.Infrastructure.Entity;
 
 public static class StatusMapper
 {
-    public static StatusEntity ToEntity(Domain.Aggregate.FlightStatus aggregate)
+    public static StatusEntity ToEntity(FlightStatusAggregate aggregate)
     {
         return new StatusEntity
         {
@@ -15,11 +15,11 @@ public static class StatusMapper
         };
     }
 
-    public static Domain.Aggregate.FlightStatus ToDomain(StatusEntity entity)
+    public static FlightStatusAggregate ToDomain(StatusEntity entity)
     {
-        var aggregate = (Domain.Aggregate.FlightStatus)Activator.CreateInstance(typeof(Domain.Aggregate.FlightStatus), nonPublic: true)!;
-        typeof(Domain.Aggregate.FlightStatus).GetProperty("Id")?.SetValue(aggregate, entity.Id);
-        typeof(Domain.Aggregate.FlightStatus).GetProperty("Name")?.SetValue(aggregate, entity.Name);
+        var aggregate = (FlightStatusAggregate)Activator.CreateInstance(typeof(FlightStatusAggregate), nonPublic: true)!;
+        typeof(FlightStatusAggregate).GetProperty("Id")?.SetValue(aggregate, entity.Id);
+        typeof(FlightStatusAggregate).GetProperty("Name")?.SetValue(aggregate, entity.Name);
         return aggregate;
     }
 }

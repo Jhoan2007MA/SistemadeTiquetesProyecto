@@ -10,6 +10,6 @@ public class GetStatusUseCase
 {
     private readonly IFlightStatusRepository _repository;
     public GetStatusUseCase(IFlightStatusRepository repository) => _repository = repository;
-    public async Task<IEnumerable<FlightStatus>> ExecuteGetAllAsync() => await _repository.GetAllAsync();
-    public async Task<FlightStatus?> ExecuteGetByIdAsync(Guid id) => await _repository.GetByIdAsync(id);
+    public async Task<IEnumerable<FlightStatusAggregate>> ExecuteGetAllAsync() => await _repository.GetAllAsync();
+    public async Task<FlightStatusAggregate?> ExecuteGetByIdAsync(Guid id) => await _repository.GetByIdAsync(id);
 }
