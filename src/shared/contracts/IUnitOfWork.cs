@@ -1,4 +1,4 @@
-namespace SistemadeTiquetess.src.shared.contracts;
+namespace MyInventory2026.src.shared.contracts;
 
 public interface IUnitOfWork
 {

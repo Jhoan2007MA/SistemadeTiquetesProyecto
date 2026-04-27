@@ -1,8 +1,9 @@
 using System;
+using MySqlConnector;
 
-namespace SistemadeTiquetess.src.shared.helpers;
+namespace MyInventory2026.src.shared.helpers;
 
-public class MysqlVersionResolver
+public class MySqlVersionResolver
 {
     public static Version DetectVersion(string connectionString)
     {

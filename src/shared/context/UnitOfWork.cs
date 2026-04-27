@@ -1,6 +1,6 @@
-using SistemadeTiquetess.src.shared.contracts;
+using MyInventory2026.src.shared.contracts;
 
-namespace SistemadeTiquetess.src.shared.context;
+namespace MyInventory2026.src.shared.context;
 
 public sealed class UnitOfWork : IUnitOfWork
 {

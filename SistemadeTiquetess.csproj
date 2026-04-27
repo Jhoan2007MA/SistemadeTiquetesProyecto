@@ -19,6 +19,12 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
   </ItemGroup>
 
+  <!-- El resto de src/modules no compila (dominios incompletos, referencias rotas). Solo las entidades EF. -->
+  <ItemGroup>
+    <Compile Remove="src\modules\**\*.cs" />
+    <Compile Include="src\modules\**\Entity\*Entity.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="src\" />

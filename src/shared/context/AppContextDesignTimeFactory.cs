@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using SistemadeTiquetess.src.shared.helpers;
+using MyInventory2026.src.shared.helpers;
 
-namespace SistemadeTiquetess.src.shared.context;
+namespace MyInventory2026.src.shared.context;
 
-public sealed class AppDbContext : DbContext
+public sealed class AppDbContextDesignTimeFactory : IDesignTimeDbContextFactory<AppDbContext>
 {
     public AppDbContext CreateDbContext(string[] args)
     {
@@ -13,7 +13,7 @@ public sealed class AppDbContext : DbContext
 
         var config = new ConfigurationBuilder()
             .SetBasePath(basePath)
-            .AddJsonFile("appsettings.json", optional: false)
+            .AddJsonFile("appsettings.json", optional: true)
             .AddEnvironmentVariables()
             .Build();
 
@@ -22,7 +22,7 @@ public sealed class AppDbContext : DbContext
 
         if (string.IsNullOrWhiteSpace(connectionString))
         {
-            throw new InvalidOperationException("No se encontró una cadena de conexión válida (MySqlDB o MYSQL_CONNECTION).");
+            throw new InvalidOperationException("No se encontró una cadena de conexión válida.");
         }
 
         var detectedVersion = MySqlVersionResolver.DetectVersion(connectionString);
