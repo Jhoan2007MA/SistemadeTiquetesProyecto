@@ -14,7 +14,9 @@ public static class ReservationMapper
             CustomerId = aggregate.CustomerId,
             FlightId = aggregate.FlightId,
             ReservationDate = aggregate.ReservationDate,
-            Status = aggregate.Status
+            StatusId = aggregate.Status == "Confirmada" 
+                ? new Guid("a1000000-0000-0000-0000-000000000061") 
+                : new Guid("a1000000-0000-0000-0000-000000000060")
         };
     }
 
@@ -25,7 +27,12 @@ public static class ReservationMapper
         typeof(Reservation).GetProperty("CustomerId")?.SetValue(aggregate, entity.CustomerId);
         typeof(Reservation).GetProperty("FlightId")?.SetValue(aggregate, entity.FlightId);
         typeof(Reservation).GetProperty("ReservationDate")?.SetValue(aggregate, entity.ReservationDate);
-        typeof(Reservation).GetProperty("Status")?.SetValue(aggregate, entity.Status);
+        
+        string statusName = entity.StatusId == new Guid("a1000000-0000-0000-0000-000000000061") 
+            ? "Confirmada" 
+            : "Pendiente";
+        typeof(Reservation).GetProperty("Status")?.SetValue(aggregate, statusName);
+        
         return aggregate;
     }
 }

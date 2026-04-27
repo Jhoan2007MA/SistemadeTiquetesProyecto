@@ -234,7 +234,7 @@ public static class AppDbContextSeedData
                 CustomerId = IdCustomer1,
                 FlightId = IdFlight1,
                 ReservationDate = SampleDate,
-                Status = "Confirmada"
+                StatusId = IdRvStConf
             });
 
         modelBuilder.Entity<ReservationPassengerEntity>().HasData(

@@ -1,4 +1,5 @@
 using System;
+using SistemadeTiquetess.src.modules.Customers.Infrastructure.Entity;
 
 namespace SistemadeTiquetess.src.modules.CustomerContacts.Infrastructure.Entity;
 
@@ -13,4 +14,7 @@ public class CustomerContactEntity
     public string Email { get; set; } = string.Empty;
     public string PhoneNumber { get; set; } = string.Empty;
     public bool IsActive { get; set; }
+
+    // Propiedad de navegación
+    public virtual CustomerEntity Customer { get; set; } = null!;
 }
