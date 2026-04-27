@@ -1,8 +1,8 @@
 using System;
 using Microsoft.EntityFrameworkCore; 
 using Microsoft.Extensions.Configuration;
-using MyInventory2026.src.shared.context;
-namespace MyInventory2026.src.shared.helpers;
+using SistemadeTiquetess.src.shared.context;
+namespace SistemadeTiquetess.src.shared.helpers;
 
 public class DbContextFactory
 {

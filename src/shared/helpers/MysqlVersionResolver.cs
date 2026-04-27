@@ -1,7 +1,7 @@
 using System;
 using MySqlConnector;
 
-namespace MyInventory2026.src.shared.helpers;
+namespace SistemadeTiquetess.src.shared.helpers;
 
 public class MySqlVersionResolver
 {

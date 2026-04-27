@@ -1,13 +1,17 @@
-﻿using MyInventory2026.src.shared.context;
-using MyInventory2026.src.shared.helpers;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemadeTiquetess.src.shared.context;
+using SistemadeTiquetess.src.shared.helpers;
 using SistemadeTiquetess.src.shared.ui.Menus;
 
 try
 {
     using var context = DbContextFactory.Create();
+    Console.WriteLine("Aplicando migraciones pendientes en la base de datos...");
+    await context.Database.MigrateAsync();
+
     if (context.Database.CanConnect())
     {
-        Console.WriteLine("Conexión exitosa a la base de datos.");
+        Console.WriteLine("Base de datos lista. Conexión correcta.");
         new ConsoleMenuOrchestrator().Start();
     }
     else
@@ -17,9 +21,12 @@ try
 }
 catch (Exception ex)
 {
-    Console.Error.WriteLine($"Error al conectar con la base de datos: {ex.Message}");
+    Console.Error.WriteLine($"Error con la base de datos: {ex.Message}");
     if (ex.InnerException is not null)
     {
         Console.Error.WriteLine($"Detalle: {ex.InnerException.Message}");
     }
+    Console.Error.WriteLine();
+    Console.Error.WriteLine("Pulsa una tecla para salir...");
+    try { Console.ReadKey(true); } catch (InvalidOperationException) { }
 }

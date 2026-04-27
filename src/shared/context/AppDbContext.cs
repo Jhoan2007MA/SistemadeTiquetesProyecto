@@ -19,7 +19,7 @@ using SistemadeTiquetess.src.modules.Seats.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.Tickets.Infrastructure.Entity;
 using SistemadeTiquetess.src.modules.TicketStatus.Infrastructure.Entity;
 
-namespace MyInventory2026.src.shared.context;
+namespace SistemadeTiquetess.src.shared.context;
 
 public class AppDbContext : DbContext
 {
@@ -50,5 +50,6 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        AppDbContextSeedData.Apply(modelBuilder);
     }
 }

@@ -1,4 +1,4 @@
-namespace MyInventory2026.src.shared.ui;
+namespace SistemadeTiquetess.src.shared.ui;
 
 public interface IModuleUI
 {
