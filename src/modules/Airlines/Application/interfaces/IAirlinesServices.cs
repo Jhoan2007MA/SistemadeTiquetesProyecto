@@ -42,6 +42,13 @@ public interface IAirlinesServices
     Task UpdateAsync(Airline airline);
 
     /// <summary>
+    /// Consulta una aerolínea específica utilizando su código oficial (IATA/ICAO).
+    /// </summary>
+    /// <param name="code">El código de la aerolínea (Ej: AV, LA).</param>
+    /// <returns>La aerolínea si existe, de lo contrario nulo.</returns>
+    Task<Airline?> GetByCodeAsync(string code);
+
+    /// <summary>
     /// Intenta localizar y remover (ya sea físicamente o con un borrado de estado lógico)
     /// a la aerolínea indicada a través de su identificador.
     /// </summary>

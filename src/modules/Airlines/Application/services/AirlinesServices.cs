@@ -37,6 +37,11 @@ public class AirlinesServices : IAirlinesServices
         await _repository.UpdateAsync(airline);
     }
 
+    public async Task<Airline?> GetByCodeAsync(string code)
+    {
+        return await _repository.GetByCodeAsync(code);
+    }
+
     public async Task DeleteAsync(Guid id)
     {
         await _repository.DeleteAsync(id);

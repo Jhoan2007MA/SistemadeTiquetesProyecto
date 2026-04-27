@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SistemadeTiquetess.src.shared.context;
 using SistemadeTiquetess.src.shared.helpers;
 using SistemadeTiquetess.src.shared.ui.Menus;
@@ -12,7 +12,7 @@ try
     if (context.Database.CanConnect())
     {
         Console.WriteLine("Base de datos lista. Conexión correcta.");
-        new ConsoleMenuOrchestrator().Start();
+        await new ConsoleMenuOrchestrator().StartAsync();
     }
     else
     {

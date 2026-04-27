@@ -41,6 +41,11 @@ public class CountriesServices : ICountriesServices
         await _repository.UpdateAsync(country);
     }
 
+    public async Task<Country?> GetByCodeAsync(string code)
+    {
+        return await _repository.GetByCodeAsync(code);
+    }
+
     public async Task DeleteAsync(Guid id)
     {
         await _repository.DeleteAsync(id);

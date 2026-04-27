@@ -33,6 +33,11 @@ public interface ICountriesServices
     Task UpdateAsync(Country country);
 
     /// <summary>
+    /// Busca un país por su código ISO.
+    /// </summary>
+    Task<Country?> GetByCodeAsync(string code);
+
+    /// <summary>
     /// Retira un país de los registros operativos consultando su ID.
     /// </summary>
     Task DeleteAsync(Guid id);
